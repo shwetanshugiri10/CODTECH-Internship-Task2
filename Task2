@@ -1,3 +1,5 @@
+//Code1 for this task and code2 is also avilable//
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -58,3 +60,71 @@ plt.title("Actual vs Predicted Values")
 
 plt.tight_layout()
 plt.show()
+
+
+
+
+
+// code2 (Another code of this task)//
+
+import pandas as pd
+import numpy as np
+from sklearn.datasets import load_boston
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Load the Boston housing dataset
+boston = load_boston()
+boston_df = pd.DataFrame(boston.data, columns=boston.feature_names)
+boston_df['MEDV'] = boston.target
+
+# Display the first few rows of the dataset
+print(boston_df.head())
+
+# Display basic statistics for numerical features
+print(boston_df.describe())
+
+# Define the feature matrix (X) and the target vector (y)
+X = boston_df[['RM']]  # Using 'RM' (average number of rooms per dwelling) as the feature
+y = boston_df['MEDV']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create and train the linear regression model
+lr = LinearRegression()
+lr.fit(X_train, y_train)
+
+# Make predictions on the test set
+y_pred = lr.predict(X_test)
+
+# Calculate performance metrics
+mse = mean_squared_error(y_test, y_pred)
+r2 = r2_score(y_test, y_pred)
+
+print(f"Mean Squared Error: {mse}")
+print(f"R-squared: {r2}")
+
+# Plot the regression line
+plt.figure(figsize=(10, 6))
+plt.scatter(X_test, y_test, color='blue', label='Actual values')
+plt.plot(X_test, y_pred, color='red', linewidth=2, label='Regression line')
+plt.xlabel('Average Number of Rooms (RM)')
+plt.ylabel('Median Value of Homes (MEDV)')
+plt.title('Linear Regression: Actual vs. Predicted Values')
+plt.legend()
+plt.show()
+
+# Plot actual vs. predicted values
+plt.figure(figsize=(10, 6))
+sns.scatterplot(y_test, y_pred)
+plt.xlabel('Actual values')
+plt.ylabel('Predicted values')
+plt.title('Actual vs. Predicted Values')
+plt.plot([min(y_test), max(y_test)], [min(y_test), max(y_test)], color='red', lw=2)
+plt.show()
+
+
