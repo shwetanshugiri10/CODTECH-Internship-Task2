@@ -29,5 +29,19 @@ scikit-learn: Machine learning library used for model training, prediction, and 
 Key Insights:    
 Linear Relationship: The dataset used has a clear linear relationship, making it suitable for simple linear regression.    
 Model Performance: The model's performance can be quantified using MSE and R-squared metrics. Lower MSE and higher R-squared values indicate a better fit.     
-Visualization: Visual plots help in understanding how well the model fits the data and how accurate the predictions are. The regression line plot shows the overall fit, while the actual vs. predicted scatter plot reveals the model's accuracy and any potential deviations.     
-Training and Testing: Splitting the data into training and testing sets ensures that the model is evaluated on unseen data, providing a better estimate of its real-world performance.   
+Visualization: Visual plots help in understanding how well the model fits the data and how accurate the predictions are. The regression line plot shows the overall fit, while the actual vs. predicted scatter plot reveals the model's accuracy and any potential deviations.  Training and Testing: Splitting the data into training and testing sets ensures that the model is evaluated on unseen data, providing a better estimate of its real-world performance.   
+
+//Code1// image file<img width="970" alt="Screenshot 2024-07-11 at 10 30 56 AM" src="https://github.com/shwetanshugiri10/CODTECH-Internship-Task2/assets/149371803/58589084-ac9b-4c62-9bb2-2d5628091af6">
+
+
+//Code2// image file
+
+<img width="654" alt="Screenshot 2024-07-09 at 12 35 44 PM" src="https://github.com/shwetanshugiri10/CODTECH-Internship-Task2/assets/149371803/42a7d74e-8a2a-4f96-99c8-a2e359ff1294">
+<img width="575" alt="Screenshot 2024-07-09 at 12 27 38 PM" src="https://github.com/shwetanshugiri10/CODTECH-Internship-Task2/assets/149371803/e37f4378-e9e3-4b2e-9593-a9282256e700">
+
+
+
+
+
+
+
